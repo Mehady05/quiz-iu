@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import '../src/App.css';
+import { Routes, Route} from "react-router-dom";
+import Home from './components/Home/Home';
+import Steps from './components/Steps/Steps';
+import { useState } from 'react';
+import { QuizContext } from './components/Helpers/QuizContext';
 
 function App() {
+  const [score, setScore] = useState(0)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QuizContext.Provider value={{score, setScore}}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/quiz" element={<Steps />} />
+      </Routes>
+    </QuizContext.Provider>
   );
 }
 

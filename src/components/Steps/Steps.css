@@ -1,0 +1,12 @@
+.steps
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-color: #dcdadb;
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-image: url(../../images/bg.jpg);
+    
+}

@@ -1,0 +1,45 @@
+.full-home{
+    max-width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-box{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+}
+
+.quiz-home h2{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    color: aquamarine;
+}
+
+.quiz-home p{
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.quiz-link a{
+    list-style: none;
+    text-decoration: none !important;
+    font-weight: 800;
+    color: beige;
+    transition: all .3s ease;
+    border: 1px solid darkcyan;
+    padding: 10px;
+    border-radius: 10px;
+}
+.quiz-link:hover a{
+    color: darkcyan;
+    background-color: #fff;
+}
