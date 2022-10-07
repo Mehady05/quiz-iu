@@ -8,6 +8,10 @@ const StepsInner = () => {
   const {score, setScore} = useContext(QuizContext)
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState('');
+  const [addClass, setAddClass] = useState(false);
+  console.log(addClass);
+
+  
 
   const [number, setNumber] = useState(1)
 
@@ -23,14 +27,17 @@ const StepsInner = () => {
     if(Questions[currentQuestion].answer === optionChosen){
         setScore(score + 1);
     }
-    // setFile('endScreen');
+    if(!addClass){
+      const newClass = true;
+      setAddClass(newClass)
+    }
 };
 
 
 
   return (
     <>
-      <section className="steps-inner pop-slide" id="step-1">
+      <section className={`steps-inner pop-slide" id="step-1 ${addClass ? 'd-none' : 'd-block'}`}>
         <div className="wrapper">
           <div className="step-heading">
             <h2>English Reading & Writing test</h2>
@@ -82,7 +89,7 @@ const StepsInner = () => {
         </div>
       </section>
 
-      <section class="thankyou-page thankyou-circle steps-inner d-none" id="thankyou">
+      <section class={`thankyou-page thankyou-circle steps-inner ${addClass ? 'd-block' : 'd-none'}`} id="thankyou">
         {
           <ThankyouPage score={score}></ThankyouPage>
         }
