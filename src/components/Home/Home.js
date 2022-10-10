@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PlayButton from "../PlayButton/PlayButton";
 import "./Home.css";
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
                         <p>You can do this, I believe in you.</p>
                     </main>
                     <nav className="quiz-link text-center">
-                        <Link to="/quiz">Quiz Start</Link>
+                        <Link to="/quiz" className={{marginTop:'20px'}}><PlayButton></PlayButton></Link>
                     </nav>
                 </div>
             </div>

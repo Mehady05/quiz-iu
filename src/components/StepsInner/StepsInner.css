@@ -77,7 +77,7 @@
 }
 .form-input input
 {
-    -webkit-appearance: none; 
+    appearance: none; 
     border: solid 2px rgb(173, 200, 173);
     border-radius: 50%;
     width: 33px;
