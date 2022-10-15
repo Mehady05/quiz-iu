@@ -29,7 +29,7 @@
     font-size: 15px;
 }
 
-/* .quiz-link a{
+.quiz-link a{
     list-style: none;
     text-decoration: none !important;
     font-weight: 800;
@@ -38,7 +38,7 @@
     border: 1px solid darkcyan;
     padding: 10px;
     border-radius: 10px;
-} */
+}
 .quiz-link:hover a{
     color: darkcyan;
     background-color: #fff;

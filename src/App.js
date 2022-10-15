@@ -4,6 +4,9 @@ import Home from './components/Home/Home';
 import Steps from './components/Steps/Steps';
 import { useState } from 'react';
 import { QuizContext } from './components/Helpers/QuizContext';
+import React from 'react';
+import ThankyouPage from './components/ThankyouPage/ThankyouPage';
+
 
 function App() {
   const [score, setScore] = useState(0)
@@ -12,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Steps />} />
+        <Route path="/last" element={<ThankyouPage />} />
       </Routes>
     </QuizContext.Provider>
   );

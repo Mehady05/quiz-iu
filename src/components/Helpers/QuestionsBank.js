@@ -1,10 +1,10 @@
 export const Questions = [
   {
     question: "Which one is correct ?",
-    optionA: "I don't have any money. Therefore, i will go shopping.",
-    optionB: "I don't have any money. Moreover, i will go shopping.",
-    optionC: "I don't have any money. However, i will go shopping.",
-    optionD: "I don't have any money. Likewise, i will go shopping.",
+    optionA: "I don't have any money. Therefore, I will go shopping.",
+    optionB: "I don't have any money. Moreover, I will go shopping.",
+    optionC: "I don't have any money. However, I will go shopping.",
+    optionD: "I don't have any money. Likewise, I will go shopping.",
     answer: "C",
   },
   {
@@ -52,12 +52,12 @@ export const Questions = [
     optionA: "The team usually play games on Saturday morning.",
     optionB: "The team usually plays games on Saturday morning.",
     optionC: "The team usually plays games on the Saturday morning.",
-    optionD: "The team usually play games in the Saturday morning.",
+    optionD: "The team usually play games on the Saturday morning.",
     answer: "B",
   },
   {
     question: "Choose the correct option ?",
-    optionA: "She refuses to work late, to wok early, or working at home.",
+    optionA: "She refuses to work late, to work early, or working at home.",
     optionB: "She refuses to work late, working early, or to work at home.",
     optionC: "She refuses to work late, work early, or work at home.",
     optionD: "She refuses to work late, to work early, or work at home.",
@@ -83,7 +83,7 @@ export const Questions = [
     question: "Choose the correct option ?",
     optionA: "I met a doctor and a police officer at the party.",
     optionB: "I met a Doctor and a Police Officer at the party.",
-    optionC: "I met a Doctor ans a Police Officer at the party.",
+    optionC: "I met a Doctor and a Police officer in the party.",
     optionD: "I met a Doctor and a police officer at the party.",
     answer: "A",
   },
@@ -93,7 +93,7 @@ export const Questions = [
     optionB: "Due to the heavy rain, the river has become flood.",
     optionC: "Due to the heavy rain, the river has become flooded.",
     optionD: "Due to the heavy rain, the river has become flooding.",
-    answer: "A",
+    answer: "C",
   },
   {
     question: "Choose the correct option ?",
@@ -129,7 +129,7 @@ export const Questions = [
   },
   {
     question: "Choose the correct option ?",
-    optionA: "Without proper identification, he could not enter the building.",
+    optionA: "Without proper identification: he could not enter the building.",
     optionB: "Without proper identification, he could not enter the building.",
     optionC: "Without proper identification. He could not enter the building.",
     optionD: "Without proper identification; he could not enter the building.",
@@ -173,7 +173,7 @@ export const Questions = [
     optionB: "We can't decide",
     optionC: "It wasn't very difficult",
     optionD: "No option is right",
-    answer: "A",
+    answer: "B",
   },
   {
     question: "I can't understand this email",
@@ -401,5 +401,13 @@ export const Questions = [
     optionC: "rush hour",
     optionD: "peak time",
     answer: "C",
+  },
+  {
+    question: "Choose the correct option.",
+    optionA: "She will be writing the essay tomorrow.",
+    optionB: "She had not wrote the essay by last Friday.",
+    optionC: "She has not written the essay yet.",
+    optionD: "She will have wrote the essay by Friday",
+    answer: "A",
   },
 ];

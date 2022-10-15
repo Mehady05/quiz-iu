@@ -10,18 +10,17 @@ const StepsInner = () => {
   const [optionChosen, setOptionChosen] = useState("");
   const [addClass, setAddClass] = useState(false);
 
-  // const [radioClass, setRadioClass] = useState(false);
-  // console.log(radioClass);
+  // levels test
+  const [levels, setLevels] = useState(false);
 
-  const [number, setNumber] = useState(1);
+  const [questionNumber, setQuestionNumber] = useState(1);
 
   const nextQuestion = () => {
     if (Questions[currentQuestion].answer === optionChosen) {
       setScore(score + 1);
     }
     setCurrentQuestion(currentQuestion + 1);
-    setNumber(number + 1);
-    // setRadioClass(false);
+    setQuestionNumber(questionNumber + 1);
   };
 
   const preQuestion = () => {
@@ -32,10 +31,8 @@ const StepsInner = () => {
       setCurrentQuestion(currentQuestion);
     } else {
       setCurrentQuestion(currentQuestion - 1);
-      setNumber(number - 1);
+      setQuestionNumber(questionNumber - 1);
     }
-
-    // setRadioClass(false);
   };
 
   const finisQuiz = () => {
@@ -45,6 +42,9 @@ const StepsInner = () => {
     if (!addClass) {
       const newClass = true;
       setAddClass(newClass);
+    }
+    if (!levels) {
+      setLevels(true);
     }
   };
 
@@ -59,10 +59,11 @@ const StepsInner = () => {
           <div className="step-heading">
             <h2>English Reading & Writing test</h2>
             <p>Fill out this question and justify your level !</p>
+            <h3 className="only">You have only 30 minute</h3>
           </div>
           <div className="step-bar">
             <span className="step-counter">
-              {number} / {Questions.length}
+              {questionNumber} / {Questions.length}
             </span>
             <div className="step-bar-inner">
               <div className="step-bar-move step-move m25"></div>
@@ -79,8 +80,6 @@ const StepsInner = () => {
                   name="work"
                   onClick={(e) => {
                     setOptionChosen("A");
-                    // setRadioClass((e) => !e);
-                    // console.log("click 01", e.target.checked);
                   }}
                 />
                 {Questions[currentQuestion].optionA}
@@ -91,8 +90,6 @@ const StepsInner = () => {
                   name="work"
                   onClick={(e) => {
                     setOptionChosen("B");
-                    // setRadioClass((current) => !current);
-                    // console.log("click 02", e.target);
                   }}
                 />
                 {Questions[currentQuestion].optionB}
@@ -103,8 +100,6 @@ const StepsInner = () => {
                   name="work"
                   onClick={(e) => {
                     setOptionChosen("C");
-                    // setRadioClass((current) => !current);
-                    // console.log("click 03", e.target);
                   }}
                 />
                 {Questions[currentQuestion].optionC}
@@ -115,8 +110,6 @@ const StepsInner = () => {
                   name="work"
                   onClick={(e) => {
                     setOptionChosen("D");
-                    // setRadioClass((current) => !current);
-                    // console.log("click 04", e.target);
                   }}
                 />
                 {Questions[currentQuestion].optionD}
@@ -149,7 +142,7 @@ const StepsInner = () => {
         }`}
         id="thankyou"
       >
-        {<ThankyouPage score={score}></ThankyouPage>}
+        {<ThankyouPage score={score} levels={levels}></ThankyouPage>}
       </section>
     </>
   );

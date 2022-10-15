@@ -1,15 +1,16 @@
 // import React, { useState } from "react";
-import Clock from "../Clock/Clock";
+import Countdown from "react-countdown";
 import StepsInner from "../StepsInner/StepsInner";
 import "./ShowSection.css";
 
 const ShowSection = () => {
-  // const[minute, setminute] = useState();
-  // const[second, setSecond] = useState();
+  const Completionist = () => <span>Time is over!</span>;
   return (
-    <div className="show-section">
-      <Clock></Clock>
-      <StepsInner></StepsInner>
+    <div className="show-section text-center">
+      <Countdown className="date" date={Date.now() + (60000*25)}>
+        <Completionist />
+      </Countdown>
+    <StepsInner></StepsInner>
     </div>
   );
 };
