@@ -5,13 +5,15 @@ import ThankyouPage from "../ThankyouPage/ThankyouPage";
 import "./StepsInner.css";
 
 const StepsInner = () => {
+  const [isActive, setIsActive] = useState(false);
+  console.log(isActive);
   const { score, setScore } = useContext(QuizContext);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
   const [addClass, setAddClass] = useState(false);
 
   // levels test
-  const [levels, setLevels] = useState(false);
+  const [levels, setLevels] = useState();
 
   const [questionNumber, setQuestionNumber] = useState(1);
 
@@ -21,6 +23,7 @@ const StepsInner = () => {
     }
     setCurrentQuestion(currentQuestion + 1);
     setQuestionNumber(questionNumber + 1);
+    setIsActive(false);
   };
 
   const preQuestion = () => {
@@ -47,6 +50,7 @@ const StepsInner = () => {
       setLevels(true);
     }
   };
+
 
   return (
     <>
@@ -78,8 +82,10 @@ const StepsInner = () => {
                 <input
                   type="radio"
                   name="work"
+                  className={isActive? 'input': ""}
                   onClick={(e) => {
                     setOptionChosen("A");
+                    setIsActive(true)
                   }}
                 />
                 {Questions[currentQuestion].optionA}
@@ -88,8 +94,10 @@ const StepsInner = () => {
                 <input
                   type="radio"
                   name="work"
+                  className={isActive? 'input': ""}
                   onClick={(e) => {
                     setOptionChosen("B");
+                    setIsActive(true)
                   }}
                 />
                 {Questions[currentQuestion].optionB}
@@ -98,8 +106,10 @@ const StepsInner = () => {
                 <input
                   type="radio"
                   name="work"
+                  className={isActive? 'input': ""}
                   onClick={(e) => {
                     setOptionChosen("C");
+                    setIsActive(true)
                   }}
                 />
                 {Questions[currentQuestion].optionC}
@@ -108,8 +118,10 @@ const StepsInner = () => {
                 <input
                   type="radio"
                   name="work"
+                  className={isActive? 'input': ""}
                   onClick={(e) => {
                     setOptionChosen("D");
+                    setIsActive(true)
                   }}
                 />
                 {Questions[currentQuestion].optionD}
@@ -119,7 +131,7 @@ const StepsInner = () => {
             {/* <!-- next-prev-btn --> */}
             <div className="form-buttons">
               <button type="button" className="next" onClick={preQuestion}>
-                Previous Question<i className="fa-solid fa-arrow-right"></i>
+                Previous Question<i className="fa-solid fa-arrow-left"></i>
               </button>
               {currentQuestion === Questions.length - 1 ? (
                 <button type="button" className="next" onClick={finisQuiz}>
