@@ -7,7 +7,7 @@ const ShowSection = () => {
   const Completionist = () => <span>Time is over!</span>;
   return (
     <div className="show-section text-center">
-      <Countdown className="date" date={Date.now() + (60000*25)}>
+      <Countdown className="date" date={Date.now() + (60000*30)}>
         <Completionist />
       </Countdown>
     <StepsInner></StepsInner>

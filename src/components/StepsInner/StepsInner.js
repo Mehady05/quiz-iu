@@ -6,15 +6,11 @@ import "./StepsInner.css";
 
 const StepsInner = () => {
   const [isActive, setIsActive] = useState(false);
-  console.log(isActive);
   const { score, setScore } = useContext(QuizContext);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
   const [addClass, setAddClass] = useState(false);
-
-  // levels test
-  const [levels, setLevels] = useState();
-
+  
   const [questionNumber, setQuestionNumber] = useState(1);
 
   const nextQuestion = () => {
@@ -46,11 +42,7 @@ const StepsInner = () => {
       const newClass = true;
       setAddClass(newClass);
     }
-    if (!levels) {
-      setLevels(true);
-    }
   };
-
 
   return (
     <>
@@ -73,7 +65,7 @@ const StepsInner = () => {
               <div className="step-bar-move step-move m25"></div>
             </div>
           </div>
-          <form action="#" method="post">
+          <form>
             <div className="form-heading">
               <h1>{Questions[currentQuestion].question}</h1>
             </div>
@@ -154,7 +146,7 @@ const StepsInner = () => {
         }`}
         id="thankyou"
       >
-        {<ThankyouPage score={score} levels={levels}></ThankyouPage>}
+        {<ThankyouPage score={score}></ThankyouPage>}
       </section>
     </>
   );
